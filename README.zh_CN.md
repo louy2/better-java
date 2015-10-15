@@ -8,6 +8,11 @@ would recommend taking the parts that speak to you and use them, rather than
 trying to use all of them at once. Feel free to submit pull requests 
 suggesting additions.
 
+Java 是目前最流行的编程语言之一，但似乎没有人喜欢用它。其实 Java 是个还不错的语言
+，而且最近 Java 8 发布了，所以我决定收集一个让 Java 更好的列表，包含库、实践和工具。
+「更好」是个主观判断，所以我推荐你挑选自己合意的去用，而不要试图一口气把它们全部都
+用上。有什么建议的话，请尽情提交拉取请求。
+
 This article was originally posted on 
 [my blog](https://www.seancassidy.me/better-java.html).
 
