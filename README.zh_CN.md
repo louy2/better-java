@@ -16,15 +16,21 @@ Java 是目前最流行的编程语言之一，但似乎没有人喜欢用它。
 This article was originally posted on 
 [my blog](https://www.seancassidy.me/better-java.html).
 
-## Style
+本文原发表于[我的博客](https://www.seancassidy.me/better-java.html)。
+
+## 风格
 
 Traditionally, Java was programmed in a very verbose enterprise JavaBean style.
 The new style is much cleaner, more correct, and easier on the eyes.
+
+传统上， Java 是以非常啰嗦的企业式 JavaBean 风格编写的。新风格更加简洁、明确、易读。
 
 ### Structs
 
 One of the simplest things we as programmers do is pass around data. The
 traditional way to do this is to define a JavaBean:
+
+我们程序员所做的最简单的事情之一是传递数据。传统的方法是定义一个 JavaBean ：
 
 ```java
 public class DataHolder {
@@ -46,7 +52,11 @@ public class DataHolder {
 This is verbose and wasteful. Even if your IDE automatically generated this
 code, it's a waste. So, [don't do this][dontbean].
 
+这很啰嗦。即使你的集成环境自动生成这些代码，它也没什么用。所以，[别这么做][dontbean]。
+
 Instead, I prefer the C struct style of writing classes that merely hold data:
+
+与其这样，我更喜欢用 C 语言的 struct 风格来写只放数据的类：
 
 ```java
 public class DataHolder {
@@ -62,9 +72,15 @@ This is a reduction in number of lines of code by a half. Further, this class
 is immutable unless you extend it, so we can reason about it easier as we know
 that it can't be changed.
 
+这样写去掉了一半的行数。而且，除非以新类继承，否则这个类不可变，因而我们能更方便
+地推演它。
+
 If you're storing objects like Map or List that can be modified easily, you
 should instead use ImmutableMap or ImmutableList, which is discussed in the 
 section about immutability.
+
+如果你正在用 Map 或 List 之类轻易可变的结构存储物件，你应该用 ImmutableMap 或
+ImmutableList 之类不可变结构代替它们。这在关于不可变性的章节有阐释。
 
 #### The Builder Pattern
 
