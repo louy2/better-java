@@ -8,10 +8,7 @@ would recommend taking the parts that speak to you and use them, rather than
 trying to use all of them at once. Feel free to submit pull requests 
 suggesting additions.
 
-Java 是目前最流行的编程语言之一，但似乎没有人喜欢用它。其实 Java 是个还不错的语言
-，而且最近 Java 8 发布了，所以我决定收集一个让 Java 更好的列表，包含库、实践和工具。
-「更好」是个主观判断，所以我推荐你挑选自己合意的去用，而不要试图一口气把它们全部都
-用上。有什么建议的话，请尽情提交拉取请求。
+Java 是目前最流行的编程语言之一，但似乎没有人喜欢用它。其实 Java 是个还不错的语言，而且最近 Java 8 发布了，所以我决定收集一个让 Java 更好的列表，包含库、实践和工具。「更好」是个主观判断，所以我推荐你挑选自己合意的去用，而不要试图一口气把它们全部都用上。有什么建议的话，请尽情提交拉取请求。
 
 This article was originally posted on 
 [my blog](https://www.seancassidy.me/better-java.html).
@@ -72,15 +69,13 @@ This is a reduction in number of lines of code by a half. Further, this class
 is immutable unless you extend it, so we can reason about it easier as we know
 that it can't be changed.
 
-这样写去掉了一半的行数。而且，除非以新类继承，否则这个类不可变，因而我们能更方便
-地推演它。
+这样写去掉了一半的行数。而且，除非以新类继承，否则这个类不可变，因而我们能更方便地推演它。
 
 If you're storing objects like Map or List that can be modified easily, you
 should instead use ImmutableMap or ImmutableList, which is discussed in the 
 section about immutability.
 
-如果你正在用 Map 或 List 之类轻易可变的结构存储物件，你应该用 ImmutableMap 或
-ImmutableList 之类不可变结构代替它们。这在关于不可变性的章节有阐释。
+如果你正在用 Map 或 List 之类轻易可变的结构存储物件，你应该用 ImmutableMap 或 ImmutableList 之类不可变结构代替它们。这在关于不可变性的章节有阐释。
 
 #### The Builder Pattern
 
