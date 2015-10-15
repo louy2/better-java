@@ -77,17 +77,23 @@ section about immutability.
 
 如果你正在用 Map 或 List 之类轻易可变的结构存储物件，你应该用 ImmutableMap 或 ImmutableList 之类不可变结构代替它们。这在关于不可变性的章节有阐释。
 
-#### The Builder Pattern
+#### The Builder Pattern 「构造者」模式
 
 If you have a rather complicated object that you want to build a struct for,
 consider the Builder pattern.
+
+如果你有一个比较复杂的物件，想要给它构造一个 struct ，可以考虑用「构造者」模式。
 
 You make a static inner class which will construct your object. It uses
 mutable state, but as soon as you call build, it will emit an immutable
 object.
 
+你需要创建一个 static 的内部类来构造你的物件。它使用可变的状态，但只要你使用 `build()` 函数，它就会返回一个不可变的物件。
+
 Imagine we had a more complicated *DataHolder*. The builder for it might look
 like:
+
+想象我们有一个更加复杂的 *DataHolder* 。它的构造者可能是这样的：
 
 ```java
 public class ComplicatedDataHolder {
@@ -118,6 +124,8 @@ public class ComplicatedDataHolder {
 
 Then to use it:
 
+然后它就可以这样使用：
+
 ```java
 final ComplicatedDataHolder cdh = new ComplicatedDataHolder.Builder()
     .data("set this")
@@ -130,8 +138,12 @@ give you a taste for what it's like. This ends up with a lot of the boilerplate
 we were trying to avoid, but it gets you immutable objects and a very fluent
 interface. 
 
+[有别的更好的「构造者」的例子][builderex]，但上例应该能给你一点「它是什么样子」的体会。它回到了我们本来试图避免的那一大堆样板代码，但它给你不可变物件和一个流畅的接口。
+
 Instead of creating builder objects by hand, consider using one of the many 
 libraries which can help you generate builders.
+
+与其手动编写构造者，不如考虑挑选一个库来帮你生成构造者。
 
 #### Immutable Object Generation
 
